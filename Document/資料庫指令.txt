@@ -1,0 +1,122 @@
+drop table WSMEMBER;
+drop table HMISSION;
+drop table RMISSION;
+drop table BMISSION;
+drop table HMESS;
+drop table RMESS;
+drop table BMESS;
+
+select * from WSMEMBER;
+select * from HMISSION;
+select * from RMISSION;
+select * from BMISSION;
+
+
+create table WSMEMBER(
+	id int not null primary key identity(1,1),
+	name nvarchar(50) not null,
+	nname nvarchar(50) not null,
+	password nvarchar(2000) not null,
+	email nvarchar(50) not null,
+	mphoto nvarchar(50) not null
+)
+
+select * from WSMEMBER
+
+
+create table HMISSION(
+	hid int not null primary key identity(1,1),
+	hname nvarchar(50) not null,
+	hlevel nvarchar(50) not null,
+	hdis nvarchar(50) not null,
+	htime nvarchar(50) not null,
+	hdoc nvarchar(1000) not null,
+	himage nvarchar(100) not null,
+	htype nvarchar(50) not null,
+	hclass nvarchar(50) not null,
+	hsponsor nvarchar(50) not null,
+);
+
+select * from HMISSION;
+
+
+create table RMISSION(
+	rid int not null primary key identity(1,1),
+	rname nvarchar(50) not null,
+	rlevel nvarchar(50) not null,
+	rdis nvarchar(50) not null,
+	rtime nvarchar(50) not null,
+	rdoc nvarchar(1000) not null,
+	rimage nvarchar(100) not null,
+	rtype nvarchar(50) not null,
+	rclass nvarchar(50) not null,
+	rsponsor nvarchar(50) not null,
+);
+
+select * from RMISSION;
+
+
+create table BMISSION(
+	bid int not null primary key identity(1,1),
+	bname nvarchar(50) not null,
+	blevel nvarchar(50) not null,
+	bdis nvarchar(50) not null,
+	btime nvarchar(50) not null,
+	bdoc nvarchar(1000) not null,
+	bimage nvarchar(100) not null,
+	btype nvarchar(50) not null,
+	bclass nvarchar(50) not null,
+	bsponsor nvarchar(50) not null,
+);
+
+select * from BMISSION;
+
+
+create table HMEMBERMISSION(
+	hmid int not null primary key identity(1,1),
+	name nvarchar(50) not null,
+	hid int not null,
+	hname nvarchar(50) not null,
+	htype nvarchar(50) not null,
+	hmstatus nvarchar(50),
+	hmphoto nvarchar(100),
+	hmthoughts nvarchar(1000)
+);
+
+select * from HMEMBERMISSION;
+
+
+create table HMESS(
+	hsid int not null primary key identity(1,1),
+	name nvarchar(50) not null,
+	hid int not null,
+	hname nvarchar(50) not null,
+	htype nvarchar(50) not null,
+	hcontent nvarchar(1000) not null
+);
+
+select * from HMESS;
+
+
+create table RMESS(
+	rsid int not null primary key identity(1,1),
+	name nvarchar(50) not null,
+	rid int not null,
+	rname nvarchar(50) not null,
+	rtype nvarchar(50) not null,
+	rcontent nvarchar(1000) not null
+);
+
+select * from RMESS;
+
+
+create table BMESS(
+	bsid int not null primary key identity(1,1),
+	name nvarchar(50) not null,
+	bid int not null,
+	bname nvarchar(50) not null,
+	btype nvarchar(50) not null,
+	bcontent nvarchar(1000) not null
+);
+
+select * from BMESS;
