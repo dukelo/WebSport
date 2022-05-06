@@ -1,0 +1,30 @@
+/* header */
+header{
+    background-color: #74b9ff;
+    font-size: 1.5rem;
+}
+
+footer{
+    background-color: #74b9ff;
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration:none;
+}
+
+.hborder{
+    border: 0.1rem solid black;
+    border-radius: 0.2rem;
+}
+
+.hcolor{
+    color: #0984e3;
+}
+
+
+
+.loginp{
+    font-size: 10px;
+    color: #b2bec3;
+}
